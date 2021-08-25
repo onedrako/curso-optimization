@@ -26,8 +26,8 @@ jobs:
           npm install
           npm run build
 
-      - name: Audit with lighthouse CI
-        uses: treosh/lighthouse-ci-action@v2
+      - name: Lighthouse CI Action
+        uses: treosh/lighthouse-ci-action@v8
         with:
           # Configuración para auditar sobre un sito estático
           # Lee más en:
@@ -35,6 +35,3 @@ jobs:
           runs: 5
           uploadArtifacts: true
           configPath: './.github/workflows/setup/lighthouse-audit.json'
-
-      - name: Lighthouse CI Action
-        uses: treosh/lighthouse-ci-action@v8
